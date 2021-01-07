@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+    background: #fcfcff;
+    font-family: -apple-system, Roboto, sans-serif, serif;
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body,
+div {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+}
+
+.bluehover {
+    transition: all 0.25s ease-in-out;
+}
+
+.bluehover:hover {
+    color: #ff6700 !important;
+    transition: all 0.25s ease-in-out;
+}
+
+.clickable {
+    color: #232129;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+.clickable:hover {
+    color: #0496ff;
+    font-weight: 700;
+    cursor: pointer;
+}

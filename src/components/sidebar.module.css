@@ -1,0 +1,35 @@
+@keyframes SlowFade {
+  0% {
+    opacity: 0; 
+  }
+  50% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.logo, .navs {
+  animation: SlowFade 0.5s ease-in-out 0s 1;
+}
+
+.logo > * {
+  transition: fill 0.2s;
+}
+
+.logo .black {
+  fill: black;
+}
+
+.logo .blue {
+  fill: #0496ff;
+}
+
+.logo:hover .blue {
+  fill: #ff6700;
+}
+
+.logo:hover .block {
+  fill: #ff6700;
+}
