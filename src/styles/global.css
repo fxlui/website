@@ -19,6 +19,32 @@ div {
   padding: 0;
 }
 
+h3 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h1 {
+    margin: 0;
+    font-size: 8em;
+    line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .h3 {
+      font-size: 5vw !important;
+    }
+  
+    .h1 {
+      font-size: 20vw !important;
+    }
+  
+    .p {
+      font-size: 3.5vw !important;
+    }
+}
+
 .bluehover {
     transition: all 0.25s ease-in-out;
 }

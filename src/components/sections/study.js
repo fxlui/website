@@ -14,7 +14,7 @@ const StyledText = styled.p`
   max-width: 700px;
 `
 
-export default function About({ id, setter }) {
+export default function Study({ id, setter }) {
   
   return (
     <Section id={id} setter={setter}>
@@ -27,10 +27,10 @@ export default function About({ id, setter }) {
       }}>
         <h3 style={{ paddingBottom: '0.5em' }}>About Me</h3>
         <StyledText>
-          Hi! I'm Eric Liu, a Computer Science student based in Sydney, AU.
+          I am currently **3rd** year in UNSW
         </StyledText>
         <StyledText>
-          Here are the technologies blab:
+          Here are the coursees
         </StyledText>
       </div>
     </Section>

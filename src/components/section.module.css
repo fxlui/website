@@ -11,9 +11,15 @@
 }
 
 .section {
-    animation: Fader 1s ease-in-out 0s 1;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    scroll-snap-align: center;
+  animation: Fader 1s ease-in-out 0s 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  scroll-snap-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .section > div {
+    align-items: center;
+  }
 }

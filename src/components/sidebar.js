@@ -5,20 +5,9 @@ import styles from "./sidebar.module.css"
 export default function Sidebar({ children }) {
   
   return (
-    <div className="sidebar" style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        height: '100vh',
-        margin: `0 auto`,
-        display: `flex`,
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: '0 46px', 
-      }}>
+    <div className={styles.sidebar}>
       <div style={{ flex: 1, position: 'relative'}}>
-        <a href="#">
+        <a href="#home">
           <svg
             className={styles.logo}
             xmlns="http://www.w3.org/2000/svg"

@@ -17,19 +17,17 @@ import {
 
 
 export default function Nav({ status }) {
-  
+
   return (
-    <nav
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <IconButton enabled={status === 'about'} reg={<IoPersonOutline />} hov={<IoPerson />} link="about" />
-      <IconButton enabled={status === 'studies'} reg={<IoSchoolOutline />} hov={<IoSchool />} highlight="#ffbc42" />
-      <IconButton enabled={status === 'work'} reg={<IoBriefcaseOutline />} hov={<IoBriefcase />} />
-      <IconButton enabled={status === 'projects'} reg={<IoFolderOpenOutline />} hov={<IoFolderOpen />} />
-      <IconButton enabled={status === 'contact'} reg={<IoChatboxOutline />} hov={<IoChatboxEllipses />} />
+    <nav style={{
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
+      <IconButton title="About Me" enabled={status === 'about'} reg={<IoPersonOutline />} hov={<IoPerson />} link="#about" />
+      <IconButton title="Studies" enabled={status === 'study'} reg={<IoSchoolOutline />} hov={<IoSchool />} highlight="#ffbc42" />
+      <IconButton title="Work" enabled={status === 'work'} reg={<IoBriefcaseOutline />} hov={<IoBriefcase />} />
+      <IconButton title="Projects" enabled={status === 'projects'} reg={<IoFolderOpenOutline />} hov={<IoFolderOpen />} />
+      <IconButton title="Contact Me" enabled={status === 'contact'} reg={<IoChatboxOutline />} hov={<IoChatboxEllipses />} />
     </nav>
   )
 }

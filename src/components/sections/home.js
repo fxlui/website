@@ -1,54 +1,71 @@
 import React from "react"
 
+import styled from 'styled-components'
 import Section from '../section.js'
+import IconButton from '../icon-button.js'
+
 import styles from './home.module.css'
-import VisibilitySensor from "react-visibility-sensor";
+
+import {
+  IoLogoGithub,
+  IoMail,
+} from "react-icons/io5"
+
+const Spacer = styled.div`
+  height: 50px;
+  width: 20px;
+`
 
 export default function Home({ id, setter }) {
+
+  React.useEffect(() => setter(id), [])
   
   return (
     <Section id={id} setter={setter} >
-      <div style={{
+      <div className={styles.container} style={{
         position: 'relative',
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
       }}>
-        <div style={{
-          position: 'absolute',
-          top: '52px',
-          right: '46px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '38px',
-        }}>
-          Social Icons
-        </div>
-        <h3 style={{ margin: 0, fontSize: '2em', fontWeight: 500 }}>Hi 👋, my name is</h3>
-        <h1
-          className="blackhover"
-          style={{
-            margin: '0',
-            fontSize: '8em',
-            lineHeight: 1,
-        }}>
-          Eric&nbsp;
-          <span
-            className="bluehover"
-            style={{ margin: 0, color: '#0496ff', fontWeight: 700 }}>
+        <div>
+          <h3>Hi 👋, my name is</h3>
+          <h1 className="blackhover">
+            Eric&nbsp;
+            <span
+              className="bluehover"
+              style={{ margin: 0, color: '#0496ff', fontWeight: 700 }}
+            >
               Liu
             </span>
-          .</h1>
-        <p style={{
-          fontFamily: "'Roboto Mono', monospace",
-          margin: '5px 0 0 0',
-          fontSize: '1em',
-          fontWeight: 500,
-        }}>
-          <a href="#test" className="clickable">Scroll down</a>
-          &nbsp;to find out more about me.</p>
+          .
+          </h1>
+          <p 
+            className={styles.p}
+            style={{
+              fontFamily: "'Roboto Mono', monospace",
+              margin: '5px 0 0 0',
+              fontSize: '1em',
+              fontWeight: 500,
+          }}>
+            <a href="#about" className="clickable">Scroll down</a>
+            &nbsp;to find out more about me.
+          </p>
+          <div className={styles.socials} style={{
+            position: 'absolute',
+            top: '52px',
+            right: '46px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '38px',
+          }}>
+            <IconButton title="GitHub" link="https://github.com" reg={<IoLogoGithub />} />
+            <Spacer />
+            <IconButton title="Email" link="mailto:me@fxlui.com" reg={<IoMail />} />
+          </div>
+        </div>
       </div>
     </Section>
   )

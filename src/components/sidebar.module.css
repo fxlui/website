@@ -10,6 +10,25 @@
   }
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 46px; 
+}
+
+@media screen and (max-width: 600px) {
+  .navs {
+    display: none;
+  }
+}
+
 .logo, .navs {
   animation: SlowFade 0.5s ease-in-out 0s 1;
 }

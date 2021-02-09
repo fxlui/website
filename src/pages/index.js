@@ -1,12 +1,14 @@
-import * as React from "react"
+import React from "react"
+
+import styles from "./index.module.css"
 
 import styled from "styled-components"
 import Sidebar from '../components/sidebar.js'
 import Nav from '../components/nav.js'
-import Section from '../components/section.js'
 
 import Home from '../components/sections/home.js'
 import About from '../components/sections/about.js'
+import Study from '../components/sections/study.js'
 
 // styles
 const headingStyles = {
@@ -96,8 +98,8 @@ const IndexPage = () => {
       <Sidebar>
         <Nav status={sec} />
       </Sidebar>
-      <Container>
-        <div className="spacer" style={{
+      <Container className={styles.body}>
+        <div className={styles.spacer} style={{
           flex: 1,
           minWidth: '130px',
         }}/>
@@ -105,9 +107,10 @@ const IndexPage = () => {
           color: "#232129",
           flex: 9,
         }}>
-          <Sections>
+          <Sections className={styles.sections}>
             <Home id="home" setter={setSec} />
             <About id="about" setter={setSec} />
+            <Study id="study" setter={setSec} />
           </Sections>
         </main>
       </Container>
