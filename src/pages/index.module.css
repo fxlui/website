@@ -44,3 +44,18 @@
     align-items: center;
   }
 }
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+  .spacer {
+    display: none;
+  }
+
+  .sections {
+    margin-left: 0 !important;
+  }
+
+  .body {
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -3,62 +3,60 @@
 }
 
 .link {
-    color: #0077b6;
-    text-decoration: none;
-    transition: all 0.25s;
+  color: #0077b6;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.link:hover {
+  color: #ff6700;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+  .content {
+    align-items: center;
   }
-  .link:hover {
-    color: #ff6700;
-    font-weight: 700;
-    cursor: pointer;
+  .content > * {
+    max-width: 70vw;
+  }
+  .courses {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 540px) {
+  .content ul {
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .courses {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  @media screen and (max-width: 480px) and (min-width: 540px) {
-      .textblock p, .textblock li {
-        font-size: 2.5vw !important;
-      }
-
-      .content ul {
-        margin-right: 0 !important;
-        max-width: 100% !important;
-      }
-
+  .textblock {
+    padding-right: 0;
   }
-  
-  @media screen and (max-width: 600px) {
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
 
-    .textblock p, .sub {
-        font-size: 2.5vw !important;
-      }
-  
-    .textblock h3 {
-      font-size: 5vw !important;
-    }
-  
-    .textblock h1 {
-      font-size: 20vw !important;
-    }
-  
-    .textblock {
-      padding-right: 0;
-    }
-
-    .content ul {
-      margin-right: 20px;
-    }
-  
-    .textblock p, .textblock ul {
-      padding-right: 0;
-      padding: 0 25px;
-    }
-    li {
-      font-size: 3.25vw !important;
-      max-width: 100% !important;
-    }
+  .content ul {
+    margin-right: 20px;
   }
+
+  .textblock p, .textblock ul {
+    padding-right: 0;
+    padding: 0 25px;
+  }
+}

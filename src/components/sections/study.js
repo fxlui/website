@@ -36,7 +36,6 @@ const StyledSubList = styled.ul`
   padding: 0;
   margin: 0 0 15px 0;
   font-family: "Roboto Mono", monospace;
-  font-size: 1em;
   font-weight: 500;
   line-height: 1.5em;
   li:before {
@@ -66,9 +65,9 @@ export default function Study({ id, setter }) {
         flexDirection: 'column',
         justifyContent: 'center',
       }}>
-        <h3 style={{ paddingBottom: '0.5em' }}>Studies</h3>
-        <div className={styles.textblock}>
-          <StyledText>
+        <p className="title" style={{ fontWeight: 'bold', paddingBottom: '0.5em' }}>Studies</p>
+        <div className={`${styles.textblock} paragraph`}>
+          <StyledText  style={{ marginBottom: 0 }}>
             I am currently in my third and final year in&nbsp;
             <a
               className={styles.link}
@@ -79,17 +78,17 @@ export default function Study({ id, setter }) {
               B. Computer Science
             </a>.
           </StyledText>
-          <StyledText>
+          <StyledText style={{ marginTop: 0 }}>
             Here are some of the courses I've taken:
           </StyledText>
         </div>
-        <StyledList>
+        <StyledList className={`${styles.courses} paragraph`}>
           <li>
             <Tooltip title="Mark: 95 HD" placement="right">
               <span><SiJava style={{ paddingRight: '0.5rem' }}/><CourseLink code="COMP2511" /><span style={{ fontSize: '80%' }}> Object-Oriented Programming</span></span>
             </Tooltip>
             <StyledSubList>
-              <li className={styles.sub}>Develop a Java-based application using OO design</li>
+              <li className={styles.sub}>Develop Java-based applications using OO design</li>
             </StyledSubList>
           </li>
           <li>
@@ -97,7 +96,7 @@ export default function Study({ id, setter }) {
               <span><SiPostgresql style={{ paddingRight: '0.5rem' }}/><CourseLink code="COMP3311" /><span style={{ fontSize: '80%' }}> Database Systems</span></span>
             </Tooltip>
             <StyledSubList>
-              <li className={styles.sub}>Designing database applications using PostgreSQL</li>
+              <li className={styles.sub}>Designing and implementing PostgreSQL databases</li>
             </StyledSubList>
           </li>
           <li>
@@ -106,7 +105,6 @@ export default function Study({ id, setter }) {
             </Tooltip>
             <StyledSubList>
               <li className={styles.sub}>Developing a Python-based backend with Agile approach</li>
-              <li className={styles.sub}>Managing development of the project with a team</li>
             </StyledSubList>
           </li>
           <li>
@@ -114,7 +112,7 @@ export default function Study({ id, setter }) {
               <span><SiJavascript style={{ paddingRight: '0.5rem' }}/><CourseLink code="COMP6080" /><span style={{ fontSize: '80%' }}> Web Front-end Programming</span></span>
             </Tooltip>
             <StyledSubList>
-              <li className={styles.sub}>hi</li>
+              <li className={styles.sub}>Creating front-ends using HTML/CSS and React</li>
             </StyledSubList>
           </li>
           <li>
@@ -122,7 +120,7 @@ export default function Study({ id, setter }) {
               <span><SiFigma style={{ paddingRight: '0.5rem' }}/><CourseLink code="COMP3511" /><span style={{ fontSize: '80%' }}> Human Computer Interaction</span></span>
             </Tooltip>
             <StyledSubList>
-              <li className={styles.sub}>hi</li>
+              <li className={styles.sub}>Leading a team to design a product with UI/UX in mind</li>
             </StyledSubList>
           </li>
         </StyledList>

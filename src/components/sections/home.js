@@ -30,8 +30,8 @@ export default function Home({ id, setter }) {
         justifyContent: 'center',
       }}>
         <div>
-          <h3>Hi 👋, my name is</h3>
-          <h1 className="blackhover">
+          <p className="title">Hi 👋, my name is</p>
+          <p className="emphasis blackhover">
             Eric&nbsp;
             <span
               className="bluehover"
@@ -40,9 +40,9 @@ export default function Home({ id, setter }) {
               Liu
             </span>
           .
-          </h1>
+          </p>
           <p 
-            className={styles.p}
+            className="paragraph"
             style={{
               fontFamily: "'Roboto Mono', monospace",
               margin: '5px 0 0 0',
@@ -61,9 +61,9 @@ export default function Home({ id, setter }) {
             alignItems: 'center',
             height: '38px',
           }}>
-            <IconButton title="GitHub" link="https://github.com" reg={<IoLogoGithub />} />
+            <IconButton title="GitHub" link="https://github.com/fxlui" reg={<IoLogoGithub />} />
             <Spacer />
-            <IconButton title="Email" link="mailto:me@fxlui.com" reg={<IoMail />} />
+            <IconButton title="Email" link="mailto:hi@fxlui.com" reg={<IoMail />} />
           </div>
         </div>
       </div>

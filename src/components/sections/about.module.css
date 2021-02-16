@@ -2,6 +2,16 @@
   padding-right: 50px;
 }
 
+@media screen and (max-height: 400px) and (orientation: landscape) {
+  .content {
+    align-items: center;
+  }
+
+  .content > * {
+    max-width: 60vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .content {
     display: flex;
@@ -10,28 +20,16 @@
     align-items: center;
   }
 
-  .textblock h3 {
-    font-size: 5vw !important;
-  }
-
-  .textblock h1 {
-    font-size: 20vw !important;
-  }
-
   .textblock {
     padding-right: 0;
   }
 
-  .textblock p, .textblock ul {
+  .textblock p {
     padding-right: 0;
     padding: 0 25px;
   }
   ul {
     display: block !important;
     grid-template-columns: none !important;
-  }
-  li {
-    font-size: 3.25vw !important;
-    max-width: 100% !important;
   }
 }

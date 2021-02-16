@@ -10,53 +10,7 @@ import Nav from '../components/nav.js'
 import Home from '../components/sections/home.js'
 import About from '../components/sections/about.js'
 import Study from '../components/sections/study.js'
-
-// styles
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: "300",
-  fontSize: "24px",
-  maxWidth: "560px",
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: "16px",
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: "14px",
-}
+import Contact from '../components/sections/contact.js'
 
 const Dots = styled.div`
   position: absolute;
@@ -84,7 +38,7 @@ const IndexPage = () => {
       case "about":
         setBgColour(styles.lightblue)
         break;
-      case "contact":
+      case "darkmode":
         setBgColour(styles.darkblue)
         setDark(true)
         break;
@@ -97,7 +51,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <title>Home Page</title>
+      <title>Eric Liu</title>
       <Dots className={bgColour} dot={dotColour} />
       <Sidebar d={dark} >
         <Nav status={sec} darkmode={dark} />
@@ -112,9 +66,10 @@ const IndexPage = () => {
           flex: 9,
         }}>
           <Div100vh className={styles.sections}>
-              <Home id="home" setter={setSec}/>
-              <About id="about" setter={setSec}/>
-              <Study id="studies" setter={setSec}/>
+            <Home id="home" setter={setSec}/>
+            <About id="about" setter={setSec}/>
+            <Study id="studies" setter={setSec}/>
+            <Contact id="contact" setter={setSec}/>
           </Div100vh>
         </main>
       </Div100vh>
