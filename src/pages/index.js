@@ -78,25 +78,42 @@ const Dots = styled.div`
   width: 100%;
   margin: 0 auto;
   background: #fcfcff;
-  background-image: radial-gradient(circle at 2px 2px, #e9ecef 1px, transparent 0);
+  background-image: radial-gradient(circle at 2px 2px, ${props => props.dot} 1px, transparent 0);
   background-size: 22px 22px;
   z-index: -99;
+  transition: 0.5s;
 `
 
 // markup
 const IndexPage = () => {
   const [sec, setSec] = React.useState('');
+  const [dark, setDark] = React.useState(false);
+  const [bgColour, setBgColour] = React.useState(styles.none);
+  const [dotColour, setDotColour] = React.useState('#e9ecef');
 
   React.useEffect(() => {
     console.log(sec)
+    switch (sec) {
+      case "about":
+        setBgColour(styles.lightblue)
+        break;
+      case "contact":
+        setBgColour(styles.darkblue)
+        setDark(true)
+        break;
+      default:
+        setBgColour(styles.none)
+        setDark(false)
+        break;
+    }
   }, [sec])
 
   return (
     <>
       <title>Home Page</title>
-      <Dots />
-      <Sidebar>
-        <Nav status={sec} />
+      <Dots className={bgColour} dot={dotColour} />
+      <Sidebar d={dark} >
+        <Nav status={sec} darkmode={dark} />
       </Sidebar>
       <Container className={styles.body}>
         <div className={styles.spacer} style={{
@@ -104,13 +121,13 @@ const IndexPage = () => {
           minWidth: '130px',
         }}/>
         <main style={{
-          color: "#232129",
+          color: dark ? "#EFF6EE" : "#232129",
           flex: 9,
         }}>
           <Sections className={styles.sections}>
-            <Home id="home" setter={setSec} />
-            <About id="about" setter={setSec} />
-            <Study id="study" setter={setSec} />
+            <Home id="home" setter={setSec}/>
+            <About id="about" setter={setSec}/>
+            <Study id="studies" setter={setSec}/>
           </Sections>
         </main>
       </Container>

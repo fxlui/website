@@ -16,18 +16,19 @@ import {
 } from "react-icons/io5";
 
 
-export default function Nav({ status }) {
+export default function Nav({ status, darkmode }) {
 
   return (
     <nav style={{
       display: 'flex',
       flexDirection: 'column',
     }}>
-      <IconButton title="About Me" enabled={status === 'about'} reg={<IoPersonOutline />} hov={<IoPerson />} link="#about" />
-      <IconButton title="Studies" enabled={status === 'study'} reg={<IoSchoolOutline />} hov={<IoSchool />} highlight="#ffbc42" />
-      <IconButton title="Work" enabled={status === 'work'} reg={<IoBriefcaseOutline />} hov={<IoBriefcase />} />
-      <IconButton title="Projects" enabled={status === 'projects'} reg={<IoFolderOpenOutline />} hov={<IoFolderOpen />} />
-      <IconButton title="Contact Me" enabled={status === 'contact'} reg={<IoChatboxOutline />} hov={<IoChatboxEllipses />} />
+      <IconButton dark={darkmode} title="About Me" enabled={status === 'about'} reg={<IoPersonOutline />} hov={<IoPerson />} link="#about" />
+      <IconButton dark={darkmode} title="Studies" enabled={status === 'studies'} reg={<IoSchoolOutline />} hov={<IoSchool />} link="#studies" highlight="#ffbc42" />
+      <IconButton dark={darkmode} title="Projects" enabled={status === 'projects'} reg={<IoFolderOpenOutline />} hov={<IoFolderOpen />} />
+      <IconButton dark={darkmode} title="Contact Me" enabled={status === 'contact'} reg={<IoChatboxOutline />} hov={<IoChatboxEllipses />} />
     </nav>
   )
 }
+
+//      <IconButton dark={darkmode} title="Work" enabled={status === 'work'} reg={<IoBriefcaseOutline />} hov={<IoBriefcase />} />

@@ -1,9 +1,9 @@
 import React from "react"
 
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@material-ui/core/Tooltip'
 import styles from "./icon-button.module.css"
 
-export default function IconButton({ enabled, reg, hov, highlight, link, title }) {
+export default function IconButton({ enabled, reg, hov, highlight, link, title, dark }) {
   const [status, setStatus] = React.useState(enabled)
   const [fader, setFader] = React.useState('')
 
@@ -22,7 +22,7 @@ export default function IconButton({ enabled, reg, hov, highlight, link, title }
   return (
     <Tooltip title={title} placement={hov ? "right" : "bottom"}>
       <a
-        className={styles.button}
+        className={dark ? `${styles.button} ${styles.lighttext}` : styles.button}
         href={link}
         onClick={hov ? () => setStatus(true) : null}
         alt={title}

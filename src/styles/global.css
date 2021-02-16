@@ -20,15 +20,15 @@ div {
 }
 
 h3 {
-    margin: 0;
-    font-size: 2em;
-    font-weight: 500;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
 }
 
 h1 {
-    margin: 0;
-    font-size: 8em;
-    line-height: 1;
+  margin: 0;
+  font-size: 8em;
+  line-height: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -54,13 +54,17 @@ h1 {
     transition: all 0.25s ease-in-out;
 }
 
+.lighttext {
+  color: #faf9f9 !important;
+}
+
 .clickable {
-    color: #232129;
-    text-decoration: none;
-    transition: all 0.25s;
+  color: #0496ff;
+  text-decoration: none;
+  transition: all 0.25s;
 }
 .clickable:hover {
-    color: #0496ff;
-    font-weight: 700;
-    cursor: pointer;
+  color: #ff6700;
+  font-weight: 700;
+  cursor: pointer;
 }
