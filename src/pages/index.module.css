@@ -1,3 +1,15 @@
+.body {
+  margin: 0;
+  display: flex;
+}
+
+.sections {
+  margin-left: 46px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 .dots {
   background: #fcfcff;
 }

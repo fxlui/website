@@ -2,6 +2,7 @@ import React from "react"
 
 import styles from "./index.module.css"
 
+import Div100vh from 'react-div-100vh'
 import styled from "styled-components"
 import Sidebar from '../components/sidebar.js'
 import Nav from '../components/nav.js'
@@ -57,21 +58,6 @@ const descriptionStyle = {
   fontSize: "14px",
 }
 
-const Container = styled.div`
-  margin: 0;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  height: 100%;
-  display: flex;
-`
-
-const Sections = styled.div`
-  margin-left: 46px;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-`
-
 const Dots = styled.div`
   position: absolute;
   display: inline;
@@ -116,7 +102,7 @@ const IndexPage = () => {
       <Sidebar d={dark} >
         <Nav status={sec} darkmode={dark} />
       </Sidebar>
-      <Container className={styles.body}>
+      <Div100vh className={styles.body}>
         <div className={styles.spacer} style={{
           flex: 1,
           minWidth: '130px',
@@ -125,13 +111,13 @@ const IndexPage = () => {
           color: dark ? "#EFF6EE" : "#232129",
           flex: 9,
         }}>
-          <Sections className={styles.sections}>
-            <Home id="home" setter={setSec}/>
-            <About id="about" setter={setSec}/>
-            <Study id="studies" setter={setSec}/>
-          </Sections>
+          <Div100vh className={styles.sections}>
+              <Home id="home" setter={setSec}/>
+              <About id="about" setter={setSec}/>
+              <Study id="studies" setter={setSec}/>
+          </Div100vh>
         </main>
-      </Container>
+      </Div100vh>
     </>
   )
 }

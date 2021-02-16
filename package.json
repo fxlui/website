@@ -33,6 +33,7 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-sharp": "^2.9.0",
     "react": "^16.13.1",
+    "react-div-100vh": "^0.5.6",
     "react-dom": "^16.13.1",
     "react-icons": "^4.1.0",
     "react-loader-spinner": "^3.1.14",

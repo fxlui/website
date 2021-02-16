@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 html {
-    background: #fcfcff;
-    font-family: -apple-system, Roboto, sans-serif, serif;
-    scroll-behavior: smooth;
+  height: 100%;
+  background: #fcfcff;
+  font-family: -apple-system, Roboto, sans-serif, serif;
+  scroll-behavior: smooth;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
