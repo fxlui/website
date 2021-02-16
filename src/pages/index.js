@@ -59,9 +59,9 @@ const descriptionStyle = {
 
 const Container = styled.div`
   margin: 0;
-  height: 100vh;
-  display: flex;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  height: 100%;
+  display: flex;
 `
 
 const Sections = styled.div`
