@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-offline",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-no-index`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
