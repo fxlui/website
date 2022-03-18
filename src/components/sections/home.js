@@ -58,7 +58,7 @@ export default function Home({ id, setter }) {
           <p
             className="paragraph"
             style={{
-              paddingTop: "1rem",
+              paddingTop: "0.5rem",
               fontFamily: "'Roboto Mono', monospace",
               margin: "5px 0 0 0",
               fontSize: "1em",
